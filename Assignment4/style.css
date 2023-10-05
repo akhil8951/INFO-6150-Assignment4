@@ -1,0 +1,53 @@
+label {
+  float: left;
+  width: 150px;
+}
+#container {
+  width: 700px;
+  margin: auto;
+  background-color: beige;
+}
+main {
+  padding: 50px;
+}
+.checkboxContainerRoad {
+  display: none;
+}
+.checkboxContainerTrain {
+  display: none;
+}
+.checkboxContainerPlane {
+  display: none;
+}
+
+.checkboxContainerWater {
+  display: none;
+}
+.checkboxContainerWalk {
+  display: none;
+}
+
+.experienceTextFieldContainer {
+  display: none;
+}
+.error {
+  color: red;
+  font-size: small;
+  display: none;
+}
+.tableContainer {
+  text-align: center;
+}
+table {
+  border: 1px solid black;
+  text-align: center;
+  /* display: none; */
+}
+table th {
+  border: 1px solid black;
+  padding: 10px;
+}
+table td {
+  border: 0.5px dotted black;
+  padding: 5px;
+}

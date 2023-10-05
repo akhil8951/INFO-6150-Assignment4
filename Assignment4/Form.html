@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h2>Feedback</h2>
+        <h3>Love something? Hate something? Let us know!</h3>
+        Note : Fields marked with an asterisk(*) are mandatory
+        <br /><br />
+        <!-- <form method="post" novalidate id="feedbackForm"> -->
+        <form method="post" id="feedbackForm" class="feedbackForm">
+          <label>Title*:</label>
+          <input
+            type="radio"
+            name="title"
+            id="Miss"
+            value="Miss"
+            required
+          />Miss
+          <input type="radio" name="title" id="Mr" value="Mr" required />Mr.
+          <input
+            type="radio"
+            name="title"
+            id="title"
+            value="Mrs"
+            required
+          />Mrs.
+          <span id="titleError" class="error"></span>
+          <br /><br />
+          <label for="firstName">First Name*:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
+          />
+          <span id="firstNameError" class="error"></span>
+          <br /><br />
+
+          <label for="lastName">Last Name*:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+          />
+          <span id="lastNameError" class="error"></span>
+          <br /><br />
+
+          <label for="emailId">Email Id*:</label>
+          <input
+            type="text"
+            name="emailId"
+            id="emailId"
+            placeholder="yourname@domain.com"
+          />
+          <span id="emailIdError" class="error"></span>
+          <br /><br />
+
+          <label for="phoneNumber">Phone Number*:</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="xxx-xxx-xxxx"
+          />
+          <span id="phoneNumberError" class="error"></span>
+          <br /><br />
+
+          <label for="streetAddress1">Street Address 1*: </label>
+          <input
+            type="text"
+            name="streetAddress1"
+            id="streetAddress1"
+            placeholder="Address"
+          />
+          <span id="streetAddress1Error" class="error"></span>
+          <br /><br />
+
+          <label for="streetAddress2">Street Address 2: </label>
+          <input
+            type="text"
+            name="streetAddress2"
+            id="streetAddress2"
+            placeholder="Address"
+          />
+          <span id="streetAddress2Error" class="error"></span>
+          <br /><br />
+
+          <label for="city">City*:</label>
+          <input type="text" name="city" id="city" placeholder="City" />
+          <span id="cityError" class="error"></span>
+          <br /><br />
+
+          <label for="state">State*:</label>
+          <input type="text" name="state" id="state" placeholder="State" />
+          <span id="stateError" class="error"></span>
+          <br /><br />
+
+          <label for="zipcode">ZipCode*:</label>
+          <input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+          <span id="zipcodeError" class="error"></span>
+          <br /><br />
+
+          <label for="hearAboutUs">How did you hear*:</label>
+          <input
+            type="checkbox"
+            name="source"
+            value="facebook"
+            class="source"
+          />
+          Facebook
+          <input type="checkbox" name="source" value="google" class="source" />
+          Google
+          <input type="checkbox" name="source" value="yelp" class="source" />
+          Yelp
+          <span id="hearAboutError" class="error"></span>
+          <br /><br />
+
+          <label for="dropdown">How did you commute to the venue*:</label>
+          <br />
+          <select required id="dropdown" name="commuteOption">
+            <option value="selectAnOption">Select an option</option>
+            <option value="road">By Road</option>
+            <option value="train">By Train</option>
+            <option value="plane">By Plane</option>
+            <option value="water">By Water</option>
+            <option value="walk">By Walk</option>
+          </select>
+          <br /><br />
+
+          <div class="checkboxContainerRoad" id="checkboxContainerRoad">
+            <input
+              type="checkbox"
+              name="transport"
+              class="transport"
+              id="transportCheckbox"
+              value="car"
+            />Car
+            <input
+              class="transport"
+              type="checkbox"
+              name="transport"
+              id="transportCheckbox"
+              value="Bus"
+            />Bus
+          </div>
+
+          <div class="checkboxContainerTrain" id="checkboxContainerTrain">
+            <input
+              class="transport"
+              type="checkbox"
+              name="transport"
+              id="transportCheckbox"
+              value="mbta"
+            />MBTA
+            <input
+              class="transport"
+              type="checkbox"
+              name="transport"
+              id="transportCheckbox"
+              value="trainCompany2"
+            />TrainCompany2
+          </div>
+
+          <div class="checkboxContainerPlane" id="checkboxContainerPlane">
+            <input
+              type="checkbox"
+              class="transport"
+              name="transport"
+              id="transportCheckbox"
+              value="delta"
+            />Delta Airline
+            <input
+              type="checkbox"
+              class="transport"
+              name="transport"
+              id="transportCheckbox"
+              value="jetBlue"
+            />Jet Blue Airways
+          </div>
+          <div class="checkboxContainerWalk" id="checkboxContainerWalk">
+            <input
+              class="transport"
+              type="checkbox"
+              name="transport"
+              id="transportCheckbox"
+              value="walk"
+            />walk
+          </div>
+          <div class="checkboxContainerWater" id="checkboxContainerWater">
+            <input
+              class="transport"
+              type="checkbox"
+              name="transport"
+              id="transportCheckbox"
+              value="Ferry"
+            />Boston Ferry Service
+            <input
+              class="transport"
+              type="checkbox"
+              name="transport"
+              id="transportCheckbox"
+              value="Yacht"
+            />Yacht
+          </div>
+
+          <span id="howDidYouCommuteError" class="error"></span>
+          <div
+            class="experienceTextFieldContainer"
+            id="experienceFieldContainer"
+          >
+            <label for="experienceField">How was your experience*: </label>
+            <input type="text" name="" id="experienceTextField" />
+            <span class="error" id="expError"></span>
+          </div>
+          <br />
+          <br />
+          <label for="comments">Comments*:</label>
+          <textarea
+            name="text"
+            id="comments"
+            placeholder="Your comments"
+            rows="5"
+            cols="25"
+            required
+          ></textarea>
+          <span id="commentsError" class="error"></span>
+          <br /><br />
+
+          <input type="submit" id="submit" value="Submit" name="submit" />
+          <input type="reset" value="Reset" name="reset" />
+          <br /><br />
+        </form>
+      </main>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="tableContainer">
+      <table id="dataTable">
+        <tr>
+          <th>Title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Id</th>
+          <th>Phone Number</th>
+          <th>Street Address 1</th>
+          <th>Street Address 2</th>
+          <th>City</th>
+          <th>State</th>
+          <th>ZipCode</th>
+          <th>How Did you hear</th>
+          <th>Commute</th>
+          <th>Comments</th>
+        </tr>
+        <tr></tr>
+      </table>
+    </div>
+    <script src="Script.js"></script>
+  </body>
+</html>
